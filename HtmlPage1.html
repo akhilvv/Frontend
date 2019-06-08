@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+    function validateForm() {
+        var msg = "Please fill these fields:", flag = false;
+        if (document.form1.Text1.value == "") {
+            msg += "\nFirst Name";
+            flag = true;
+        }
+        if (document.form1.Text2.value == "") {
+            msg += "\nLast Name";
+            flag = true;
+        }
+        if (document.form1.Text3.value == "") {
+            msg += "\nAddress Line 1";
+            flag = true;
+        }
+        if (document.form1.Text4.value == "") {
+            msg += "\nAddress Line 2";
+            flag = true;
+        }
+        if (document.form1.Text5.value == "") {
+            msg += "\nCity";
+            flag = true;
+        }
+        if (flag == false)
+            return;
+        else {
+            alert(msg);
+            return;
+        }
+    }
+    </script>
+</head>
+<body>
+    <form id="form1" name="form1" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>First Name: </td>
+                <td><input name="Text1" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Last Name: </td>
+                <td><input name="Text2" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Address Line 1:</td>
+                <td><input name="Text3" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Address Line 2:</td>
+                <td><input name="Text4" type="text" /></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input name="Text5" type="text" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input name="Button1" type="submit" value="Click" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
